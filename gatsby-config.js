@@ -67,6 +67,13 @@ module.exports = {
                     ? ghostConfig.development
                     : ghostConfig.production,
         },
+        {
+            resolve: `gatsby-source-ghost-mobiledoc`,
+            options:
+                process.env.NODE_ENV === `development`
+                    ? ghostConfig.development
+                    : ghostConfig.production,
+        },
         /**
          *  Utility Plugins
          */

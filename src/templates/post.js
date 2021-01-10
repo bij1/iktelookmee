@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import { Content, ImageCard } from '@wingscms/react'
 
 import { Layout } from '../components/common'
 import { MetaData } from '../components/common/meta'
@@ -14,7 +15,10 @@ import { MetaData } from '../components/common/meta'
 */
 const Post = ({ data, location }) => {
     const post = data.ghostPost
+    const mobiledoc = data.ghostMobiledocPost.mobiledoc
 
+    const cards = [{ ...ImageCard, name: 'image' }]
+ 
     return (
         <>
             <MetaData
@@ -36,10 +40,11 @@ const Post = ({ data, location }) => {
                             <h1 className="content-title">{post.title}</h1>
 
                             {/* The main post content */ }
-                            <section
+                            <Content
+                                content={mobiledoc} cards={cards}
                                 className="content-body load-external-scripts"
-                                dangerouslySetInnerHTML={{ __html: post.html }}
                             />
+                            { mobiledoc }
                         </section>
                     </article>
                 </div>
@@ -66,6 +71,9 @@ export const postQuery = graphql`
     query($slug: String!) {
         ghostPost(slug: { eq: $slug }) {
             ...GhostPostFields
+        }
+        ghostMobiledocPost(slug: { eq: $slug }) {
+            mobiledoc
         }
     }
 `
