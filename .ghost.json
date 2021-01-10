@@ -1,7 +1,7 @@
 {
   "development": {
-    "apiUrl": " http://localhost:2368",
-    "contentApiKey": "690f01466cee08e568b7937eda"
+    "apiUrl": "https://cms.bij1.net",
+    "contentApiKey": "26e9d8366c9fcbc5f6f9ae5434"
   },
   "production": {
     "apiUrl": "https://cms.bij1.net",
