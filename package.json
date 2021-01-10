@@ -1,27 +1,12 @@
 {
-  "name": "gatsby-starter-ghost",
-  "description": "A starter template to build lightning fast websites with Ghost and Gatsby",
-  "version": "1.0.0",
-  "license": "MIT",
-  "author": "Ghost Foundation",
-  "homepage": "https://docs.ghost.org/api/gatsby/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tryghost/gatsby-starter-ghost.git"
-  },
+  "name": "iktelookmee-frontend",
+  "description": "Frontend for the IkTelOokMee website.",
   "resolutions": {
     "sharp": "0.26.0"
   },
   "engines": {
     "node": ">= 10.13.0"
   },
-  "bugs": {
-    "url": "https://github.com/tryghost/gatsby-starter-ghost/issues"
-  },
-  "keywords": [
-    "gatsby",
-    "ghost"
-  ],
   "main": "n/a",
   "scripts": {
     "serve": "gatsby build && NODE_ENV=production gatsby serve",
